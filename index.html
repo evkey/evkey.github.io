@@ -1,592 +1,579 @@
 <!DOCTYPE html>
 <html
-	xmlns="http://www.w3.org/1999/xhtml" lang="vi" xml:lang="vi">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="robots" content="index, follow" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="keywords" content="" />
-		<meta name="description" content="" />
-		<title>EVKey - Bộ gõ tiếng Việt trên Windows</title>
-		<link rel="stylesheet" href="media/css/template.css" type="text/css" />
-	</head>
-	<body>
-		<a id="home"></a>
-		<div class="wrapper box1">
-			<div class="custom">
-				<div id="logo">
-					<a href="/">EVKey</a>
-				</div>
-				<h1 class="heading">
-					<a href="/" title="Download EVKey mới nhất để gõ tiếng Việt trên Windows">Tải EVKey mới nhất để Gõ tiếng Việt</a>
-				</h1>
-				<p class="intro">EVKey là phần mềm 
-					<strong>gõ tiếng Việt có dấu</strong> được download nhiều nhất, tải miễn phí, gọn nhẹ, ổn định, dễ sử dụng, nhiều tính năng, tương thích với mọi Windows (Win 10, Win 8, Win 7) 32 bit, 64 bit.
-				</p>
-			</div>
-		</div>
-		<div class="wrapper nav">
-			<div class="custom">
-				<a id="go-online"></a>
-				<ul>
-					<li class="active">
-						<a href="#go-online">Gõ Online</a>
-					</li>
-					<li>
-						<a href="#gioi-thieu">Giới thiệu</a>
-					</li>
-					<li>
-						<a href="#hinh-anh">Hình ảnh</a>
-					</li>
-					<li>
-						<a href="#tinh-nang">Tính năng</a>
-					</li>
-					<li>
-						<a href="#download">Download EVKey</a>
-					</li>
-					<li>
-						<a href="#huong-dan">Hướng dẫn</a>
-					</li>
-					<li>
-						<a href="#tac-gia">Tác giả</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="wrapper box2">
-			<div class="inner">
-				<div class="sectiontitlegoc"></div>
-				<div class="sectiontitle">
-					<h2>Gõ Tiếng Việt Online - Đánh tiếng Việt trực tiếp không cần cài đặt bộ gõ TV</h2>
-				</div>
-				<div class="custom">
-					<div style="float:left; margin-right:20px;">
-						<textarea id="avimarea" autofocus class="avimarea" rows="10" cols="65" placeholder="Chọn kiểu gõ Telex, VNI... ngay phía dưới... và nhập văn bản tiếng Việt có dấu của bạn tại đây..."></textarea>
-					</div>
-					<div style="float:left;">
-						<table class="table">
-							<tbody>
-								<tr>
-									<th>Kiểu đánh</th>
-									<th>sắc</th>
-									<th>huyền</th>
-									<th>hỏi</th>
-									<th>ngã</th>
-									<th>nặng</th>
-									<th>mũ</th>
-									<th>móc</th>
-									<th>trăng</th>
-									<th>đ</th>
-								</tr>
-								<tr>
-									<td>TELEX</td>
-									<td>s</td>
-									<td>f</td>
-									<td>r</td>
-									<td>x</td>
-									<td>j</td>
-									<td>aa</td>
-									<td>ow</td>
-									<td>aw</td>
-									<td>dd</td>
-								</tr>
-								<tr>
-									<td>VNI</td>
-									<td>1</td>
-									<td>2</td>
-									<td>3</td>
-									<td>4</td>
-									<td>5</td>
-									<td>6</td>
-									<td>7</td>
-									<td>8</td>
-									<td>9</td>
-								</tr>
-								<tr>
-									<td>VIQR</td>
-									<td>&apos;</td>
-									<td>&grave;</td>
-									<td>&quest;</td>
-									<td>~</td>
-									<td>.</td>
-									<td>^</td>
-									<td>+</td>
-									<td>(</td>
-									<td>dd</td>
-								</tr>
-							</tbody>
-						</table>
-						<br />
-						<table class="table">
-							<tbody>
-								<tr>
-									<th>Kiểu đánh</th>
-									<th class="aleft">VD: Gõ tiếng Việt thật dễ dàng với EVKey</th>
-								</tr>
-								<tr>
-									<td>TELEX</td>
-									<td class="aleft">Gox Tieengs Vieetj thaatj deex dangf vowis EVKey</td>
-								</tr>
-								<tr>
-									<td>VNI</td>
-									<td class="aleft">Go4 Tie61ng Vie65t tha65t de64 da2ng vo71i EVKey</td>
-								</tr>
-								<tr>
-									<td>VIQR</td>
-									<td class="aleft">Go~ Tie^'ng Vie^.t tha^.t de^~ da`ng vo+'i EVKey</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-				<div class="clear"></div>
-				<div id="AVIMControl">
-					<div class="AVIMControl">
-						<fieldset>
-							<strong>Kiểu gõ:</strong>
-							<input id="avim_off" type="radio" name="AVIMMethod" onclick="AVIMObj.setMethod(-1);" />&nbsp;
-							<label for="avim_off" class="lcontrol">Tắt</label>
-							<input id="avim_auto" type="radio" name="AVIMMethod" onclick="AVIMObj.setMethod(0);" />&nbsp;
-							<label for="avim_auto" class="lcontrol">Tự động</label>
-							<input id="avim_telex" type="radio" name="AVIMMethod" onclick="AVIMObj.setMethod(1);" />&nbsp;
-							<label for="avim_telex" class="lcontrol">TELEX</label>
-							<input id="avim_vni" type="radio" name="AVIMMethod" onclick="AVIMObj.setMethod(2);" />&nbsp;
-							<label for="avim_vni" class="lcontrol">VNI</label>
-							<input id="avim_viqr" type="radio" name="AVIMMethod" onclick="AVIMObj.setMethod(3);" />&nbsp;
-							<label for="avim_viqr" class="lcontrol">VIQR</label>
-							<span>&nbsp;~~~~~&nbsp;</span>
-							<input id="avim_ckspell" type="checkbox" onclick="AVIMObj.setSpell(this);" />&nbsp;
-							<label for="avim_ckspell" class="lcontrol">Chính tả</label>
-							<input id="avim_daucu" type="checkbox" onclick="AVIMObj.setDauCu(this);" />&nbsp;
-							<label for="avim_daucu" class="lcontrol">Bỏ dấu sớm</label>
-						</fieldset>
-					</div>
-				</div>
-				<script async type="text/javascript" src="media/js/avim.js"></script>
-				<p>Kiểu gõ Telex được ưa thích sử dụng ở miền Bắc vì thuận tiện, gõ nhanh, dễ nhớ và dễ dùng. Trong khi đó kiểu gõ VNI (kết hợp với các phím số 0-9) lại được sử dụng phổ biên ở miền Nam.</p>
-				<p>Nếu bạn chọn 
-					<strong>bỏ dấu sớm</strong> (hay bỏ dấu kiểu cũ) bộ gõ sẽ bỏ dấu (sắc, huyền, hỏi, ngã, nặng) ngay trên nguyên âm đầu tiên (
-					<em>ví dụ: hòa, tỏa, thúy, thủy...</em>). Về mặt mỹ thuật, kiểu bỏ dấu sớm sẽ tạo sự cân đối, đẹp mắt cho các từ tiếng Việt. Ngược lại khi chọn bỏ dấu muộn, bộ gõ sẽ bỏ dấu tiếng Việt trên nguyên âm cuối cùng của từ (
-					<em>ví dụ: hoà, toả, thuý, thuỷ...</em>). Bạn nên thống nhất một kiểu bỏ dấu khi soạn thảo văn bản trên Windows vì nó sẽ liên quan tới thứ tự sắp xếp (chẳng hạn như khi sắp xếp danh sách theo họ tên).
-				</p>
-			</div>
-		</div>
-		<div class="wrapper nav">
-			<div class="custom">
-				<a id="gioi-thieu"></a>
-				<ul>
-					<li>
-						<a href="#go-online">Gõ Online</a>
-					</li>
-					<li class="active">
-						<a href="#gioi-thieu">Giới thiệu</a>
-					</li>
-					<li>
-						<a href="#hinh-anh">Hình ảnh</a>
-					</li>
-					<li>
-						<a href="#tinh-nang">Tính năng</a>
-					</li>
-					<li>
-						<a href="#download">Download EVKey</a>
-					</li>
-					<li>
-						<a href="#huong-dan">Hướng dẫn</a>
-					</li>
-					<li>
-						<a href="#tac-gia">Tác giả</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="wrapper box2">
-			<div class="inner">
-				<div class="sectiontitlegoc"></div>
-				<div class="sectiontitle">
-					<h2>Phần mềm gõ tiếng Việt EVKey mới nhất</h2>
-				</div>
-				<div class="custom">
-					<div class="block2">
-						<p>
-							<strong>Phần mềm EVKey</strong> là một trong những
-							<strong>phần mềm tự do mã nguồn mở</strong> dùng để 
-							<strong>gõ tiếng Việt</strong> (go tieng Viet - Vietnamese) được phát hành và sử dụng hoàn toàn miễn phí
-						</p>
-						<p>
-							<strong>Bộ gõ tiếng Việt EVKey mới nhất</strong> có thể cài đặt trên 
-							<strong>hệ điều hành Windows</strong> (Win 10, Window 8, Win 7...) và được cập nhật liên tục khi có phản hồi của người dùng
-						</p>
-					</div>
-					<div class="block2">
-						<img src="media/images/screenshots/evkey.png" width="100%" height="" alt="Giao diện bộ gõ tiếng Việt EVKey trên Windows" style="max-width:570px;" />
-						<p>Ứng dụng EVKey được phát hành theo giấy phép GNU General Public License version 2.0 (GPLv2). Điều đó có nghĩa là phần mềm EVKey được phân phối miễn phí, tự do. Có thể 
-							<strong>
-								<a href="#download" title="Tải phần mềm gõ tiếng Việt EVKey mới nhất">tải EVKey</a> 
-							</strong> và cài đặt để đánh tiếng Việt dễ dàng
-						</p>
-					</div>
-				</div>
-				<hr/>
-				
-				<p>
-						<strong>Các tính năng vượt trội của EVKey so với các phần mềm khác</strong>
-				</p>
-				<p>Ngoài những chức năng cơ bản và thêm một số chức năng đặc biệt, thì EVKey là một bộ gõ tiếng Việt hoàn toàn đầy đủ những chức năng cần thiết như những phần mềm gõ Tiếng Việt khác trên thị trường.</p>
-<ol>
-Một số chức năng vượt trội của EVKey:
-<li>1. Không bị lỗi tiếng Việt khi gõ trên thanh địa chỉ trình duyệt Web hoặc trong Excel</li>
-<li>2. Tắt chức năng nhập tiếng Việt cho ứng dụng mà người dùng không muốn</li>
-<li>3. Hỗ trợ gõ tiếng Việt những ứng dụng Metro</li>
-<li>4. Hỗ trợ game LOL, DOTA 2</li>
-<li>5. Hỗ trợ game Audition và Đột kích</li>
-<li>6. Giảm hiện tượng treo bộ gõ</li>
-</ol>
-				
-				<div class="clear"></div>
-			</div>
-		</div>
-		<div class="wrapper nav">
-			<div class="custom">
-				<a id="hinh-anh"></a>
-				<ul>
-					<li>
-						<a href="#go-online">Gõ Online</a>
-					</li>
-					<li>
-						<a href="#gioi-thieu">Giới thiệu</a>
-					</li>
-					<li class="active">
-						<a href="#hinh-anh">Hình ảnh</a>
-					</li>
-					<li>
-						<a href="#tinh-nang">Tính năng</a>
-					</li>
-					<li>
-						<a href="#download">Download EVKey</a>
-					</li>
-					<li>
-						<a href="#huong-dan">Hướng dẫn</a>
-					</li>
-					<li>
-						<a href="#tac-gia">Tác giả</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="wrapper box2">
-			<div class="inner">
-				<div class="sectiontitlegoc"></div>
-				<div class="sectiontitle">
-					<h2>Giao diện bộ gõ tiếng Việt EVKey</h2>
-				</div>
-				<div class="custom">
-					<div class="block3">
-						<img src="media/images/screenshots/evkey-gui.png" />
-					</div>
-					<div class="block3">
-						<img src="media/images/screenshots/evkey-macro.png" />
-					</div>
-					<div class="block3">
-						<img src="media/images/screenshots/evkey-toolkit.png" />
-					</div>
-				</div>
-				<div class="clear"></div>
-				<div class="custom">
-					<p>Bộ gõ tiếng Việt EVKey các phiên bản từ EVKey có giao diện khá đơn giản, đồng nhất trên các hệ điều hành Windows (Win 10, Win 7..), dễ quản lý và dễ sử dụng. Mọi chức năng và thiết lập của phần mềm đều được tập trung duy nhất trên một bảng điều khiển. Ở chế độ thu nhỏ (Compact) EVKey chỉ hiện thị 3 thiết lập chính: Lựa chọn bảng mã, kiểu gõ và tổ hợp phím chuyển đổi. Điều này cho phép người sử dụng mới dễ dàng tiếp cận, không bị rối so với nhiều phần mềm gõ tiếng Việt khác như VietKey, GoTiengViet... Với những người dùng cao cấp hơn, EVKey cũng cung cấp thêm nhiều tùy chọn ở chế độ mở rộng (Advanced).</p>
-				</div>
-			</div>
-		</div>
-		<div class="wrapper nav">
-			<div class="custom">
-				<a id="tinh-nang"></a>
-				<ul>
-					<li>
-						<a href="#go-online">Gõ Online</a>
-					</li>
-					<li>
-						<a href="#gioi-thieu">Giới thiệu</a>
-					</li>
-					<li>
-						<a href="#hinh-anh">Hình ảnh</a>
-					</li>
-					<li class="active">
-						<a href="#tinh-nang">Tính năng</a>
-					</li>
-					<li>
-						<a href="#download">Download EVKey</a>
-					</li>
-					<li>
-						<a href="#huong-dan">Hướng dẫn</a>
-					</li>
-					<li>
-						<a href="#tac-gia">Tác giả</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="wrapper box2">
-			<div class="inner">
-				<div class="sectiontitlegoc"></div>
-				<div class="sectiontitle">
-					<h2>Tính năng của bộ gõ tiếng Việt EVKey - EVKey 2019</h2>
-				</div>
-				<div class="custom">
-					<div class="block2">
-						<p>Ngay từ những phiên bản đầu tiên EVKey đã hỗ trợ rất nhiều bảng mã tiếng Việt (Vietnamese) bao gồm: Unicode dựng sẵn, Unicode tổ hợp, TCVN3 (ABC), VNI Windows, BK HCM1, BK HCM2, Vietware-X, Vietware-F, VPS, VISCII... Tuy nhiên dần dần theo thời gian, một số bảng mã đã không còn phổ biến, thậm chí rất hiếm khi được nhắc đến. Vì vậy nếu bạn là người dùng mới hay dân văn phòng bạn chỉ cần quan tâm tới 2 bảng mã duy nhất: Unicode dựng sẵn và TCVN3 (ABC).</p>
-						<p>Ngoài hỗ trợ những bảng mã tiếng Việt ở trên, EVKey còn là một công cụ đắc lực cho dân lập trình vì nó cho phép bạn gõ những chuỗi ký tự dựa trên một số phương pháp mã hóa Unicode khá đặc biệt như: X UTF-8, UTF-8 Literal, NCR Decimal, NCR Hexadecimal, NCR Hex, Unicode C String.</p>
-						<p>EVKey cũng hỗ trợ chuẩn tiếng Việt của hãng Microsoft (Vietnamese locale CP 1258) - một bảng mã ít thông dụng nhưng hỗ trợ khá tốt cho các ký tự tiếng Việt xuất hiện trong các form nhập liệu, viết macro, lập trình Visual Basic trên bộ Microsoft Office như Word, Excel, Access...</p>
-						<p>EVKey Hỗ trợ 5 kiểu gõ tiếng Việt, 
-							<strong>đánh tiếng Việt</strong> - Vietnamese thông dụng nhất: TELEX, VNI, VIQR, kiểu Microsoft và kiểu tự định nghĩa. Hầu hết người miền Bắc ưa thích kiểu gõ Telex, người miền Nam thì ưa thích kiểu gõ VNI, các kiểu còn lại thì ít phổ biến.
-						</p>
-					</div>
-					<div class="block2">
-						<img src="media/images/screenshots/evkey-taskbar.png" alt="Gõ tiếng Việt EVKey trên taskbar" width="450" height="340" />
-						<p>
-							<strong>Phần mềm EVKey</strong> có nhiều phiên bản khác nhau, tất cả đều ổn định và chỉ có kích thước nhỏ (chỉ vài trăm KB), và không yêu cầu thêm bất cứ thư viện nào khác nên bạn có thể 
-							<a href="#download" title="Tải phần mềm gõ tiếng Việt EVKey mới nhất">tải EVKey</a> hoặc 
-							<strong>
-								<a href="#download" title="Download phần mềm gõ tiếng Việt EVKey mới nhất">download EVKey</a>
-							</strong> và cài đặt EVKey một cách dễ dàng.
-						</p>
-						<p>EVKey cho phép chuyển đổi (convert) qua lại giữa 15 bảng mã tiếng Việt từ clip-board (bộ nhớ máy tính) hoặc từ file văn bản .TXT hoặc .RTF</p>
-						<p>EVKey chạy rất ổn định trên tất cả các phiên bản Windows: Từ phiên bản Windows 10 - Win 10 mới nhất hiện nay, cho tới các phiên bản cũ hơn nhưng cũng khá phổ biến như Windows 8, Windows 8.1, Windows 7</p>
-					</div>
-					
-					
-					<div>
-
-
-
-
-					</div>
-				</div>
-				<div class="clear"></div>
-			</div>
-		</div>
-		<div class="wrapper nav">
-			<div class="custom">
-				<a id="download"></a>
-				<ul>
-					<li>
-						<a href="#go-online">Gõ Online</a>
-					</li>
-					<li>
-						<a href="#gioi-thieu">Giới thiệu</a>
-					</li>
-					<li>
-						<a href="#hinh-anh">Hình ảnh</a>
-					</li>
-					<li>
-						<a href="#tinh-nang">Tính năng</a>
-					</li>
-					<li class="active">
-						<a href="#download">Download EVKey</a>
-					</li>
-					<li>
-						<a href="#huong-dan">Hướng dẫn</a>
-					</li>
-					<li>
-						<a href="#tac-gia">Tác giả</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="wrapper box2">
-			<div class="inner">
-				<div class="sectiontitlegoc"></div>
-				<div class="sectiontitle">
-					<h2>Tải EVKey miễn phí - Download EVKey mới nhất cho Win 10, Win 7</h2>
-				</div>
-				<div class="custom">
-				<div class="block4">&nbsp;</div>
-					
-					<div class="block4">
-						<h3>
-							<a href="https://drive.google.com/drive/folders/12DbnnsOs89D79loTZ_rTuU696qZZPB1_" title="EVKey bản chạy trực tiếp 32bit không cần cài đặt" rel="nofollow">Bản chạy trực tiếp 32bit</a>
-						</h3>
-						<img src="media/images/download/evkey-portable.png" alt="EVKey Portable" width="155" height="144" />
-						<a class="downloadbutton" href="https://drive.google.com/drive/folders/12DbnnsOs89D79loTZ_rTuU696qZZPB1_" >Download</a>
-						<div class="downloadnote">
-							<strong>EVKey 32bit Portable</strong>
-						</div>
-					</div>
-					<div class="block4">
-						<h3>
-							<a href="https://drive.google.com/drive/folders/12DbnnsOs89D79loTZ_rTuU696qZZPB1_" title="EVKey bản chạy trực tiếp 64bit không cần cài đặt" rel="nofollow">Bản chạy trực tiếp 64bit</a>
-						</h3>
-						<img src="media/images/download/evkey-portable.png" alt="EVKey Portable" width="155" height="144" />
-						<a class="downloadbutton" href="https://drive.google.com/drive/folders/12DbnnsOs89D79loTZ_rTuU696qZZPB1_">Download</a>
-						<div class="downloadnote">
-							<strong>EVKey 64bit Portable</strong>
-						</div>
-					</div>
-				</div>
-				<div class="clear"></div>
-				<p style="text-align:center;">Website có hỗ trợ 
-					<strong>HTTPS</strong> (giao thức bảo mật với SSL), nếu muốn bạn có thể truy cập 
-					<strong>
-						<a href="/" title="Bộ gõ tiếng Việt EVKey">https://evkey.org</a>
-					</strong>
-					<br>HTTPS nhằm đảm bảo file không bị chuyển hướng, thay đổi hoặc chỉnh sửa ngay cả đối với nhà cung cấp dịch vụ Internet của bạn.
+   xmlns="http://www.w3.org/1999/xhtml" lang="vi" xml:lang="vi">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="keywords" content="" />
+      <meta name="description" content="" />
+      <title>EVKey - Bộ gõ tiếng Việt trên Windows</title>
+      <link rel="stylesheet" href="media/css/template.css" type="text/css" />
+   </head>
+   <body>
+      <a id="home"></a>
+      <div class="wrapper box1">
+         <div class="custom">
+            <a href="/"
+            <div id="logo">
+               EVKey
+            </div>
+            </a>
+            <h1 class="heading">
+               <a href="#download" title="Download EVKey mới nhất để gõ tiếng Việt trên Windows">Tải EVKey mới nhất để Gõ tiếng Việt</a>
+            </h1>
+            <p class="intro">EVKey là phần mềm 
+               <strong>gõ tiếng Việt có dấu</strong> gọn nhẹ, ổn định, được download nhiều nhất, tải miễn phí, dễ sử dụng, nhiều tính năng, tương thích với mọi Windows (Win 10, Win 8, Win 7, Win XP) 32 bit, 64 bit.
+            </p>
+         </div>
+      </div>
+      <div class="wrapper nav">
+         <div class="custom">
+            <a id="go-online"></a>
+            <ul>
+               <li class="active">
+                  <a href="#go-online">Gõ Online</a>
+               </li>
+               <li>
+                  <a href="#gioi-thieu">Giới thiệu</a>
+               </li>
+               <li>
+                  <a href="#hinh-anh">Hình ảnh</a>
+               </li>
+               <li>
+                  <a href="#tinh-nang">Tính năng</a>
+               </li>
+               <li>
+                  <a href="#download">Download EVKey</a>
+               </li>
+               <li>
+                  <a href="#huong-dan">Hướng dẫn</a>
+               </li>
+               <li>
+                  <a href="#tac-gia">Tác giả</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="wrapper box2">
+         <div class="inner">
+            <div class="sectiontitlegoc"></div>
+            <div class="sectiontitle">
+               <h2>Gõ Tiếng Việt Online - Đánh tiếng Việt trực tiếp không cần cài đặt bộ gõ TV</h2>
+            </div>
+            <div class="custom">
+               <div style="float:left; margin-right:20px;">
+                  <textarea id="avimarea" autofocus class="avimarea" rows="10" cols="65" placeholder="Chọn kiểu gõ Telex, VNI... ngay phía dưới... và nhập văn bản tiếng Việt có dấu của bạn tại đây..."></textarea>
+               </div>
+               <div style="float:left;">
+                  <table class="table">
+                     <tbody>
+                        <tr>
+                           <th>Kiểu đánh</th>
+                           <th>sắc</th>
+                           <th>huyền</th>
+                           <th>hỏi</th>
+                           <th>ngã</th>
+                           <th>nặng</th>
+                           <th>mũ</th>
+                           <th>móc</th>
+                           <th>trăng</th>
+                           <th>đ</th>
+                        </tr>
+                        <tr>
+                           <td>TELEX</td>
+                           <td>s</td>
+                           <td>f</td>
+                           <td>r</td>
+                           <td>x</td>
+                           <td>j</td>
+                           <td>aa</td>
+                           <td>ow</td>
+                           <td>aw</td>
+                           <td>dd</td>
+                        </tr>
+                        <tr>
+                           <td>VNI</td>
+                           <td>1</td>
+                           <td>2</td>
+                           <td>3</td>
+                           <td>4</td>
+                           <td>5</td>
+                           <td>6</td>
+                           <td>7</td>
+                           <td>8</td>
+                           <td>9</td>
+                        </tr>
+                        <tr>
+                           <td>VIQR</td>
+                           <td>&apos;</td>
+                           <td>&grave;</td>
+                           <td>&quest;</td>
+                           <td>~</td>
+                           <td>.</td>
+                           <td>^</td>
+                           <td>+</td>
+                           <td>(</td>
+                           <td>dd</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <br />
+                  <table class="table">
+                     <tbody>
+                        <tr>
+                           <th>Kiểu đánh</th>
+                           <th class="aleft">VD: Gõ tiếng Việt thật dễ dàng với EVKey</th>
+                        </tr>
+                        <tr>
+                           <td>TELEX</td>
+                           <td class="aleft">Gox Tieengs Vieetj thaatj deex dangf vowis EVKey</td>
+                        </tr>
+                        <tr>
+                           <td>VNI</td>
+                           <td class="aleft">Go4 Tie61ng Vie65t tha65t de64 da2ng vo71i EVKey</td>
+                        </tr>
+                        <tr>
+                           <td>VIQR</td>
+                           <td class="aleft">Go~ Tie^'ng Vie^.t tha^.t de^~ da`ng vo+'i EVKey</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            <div class="clear"></div>
+            <div id="AVIMControl">
+               <div class="AVIMControl">
+                  <fieldset>
+                     <strong>Kiểu gõ:</strong>
+                     <input id="avim_off" type="radio" name="AVIMMethod" onclick="AVIMObj.setMethod(-1);" />&nbsp;
+                     <label for="avim_off" class="lcontrol">Tắt</label>
+                     <input id="avim_auto" type="radio" name="AVIMMethod" onclick="AVIMObj.setMethod(0);" />&nbsp;
+                     <label for="avim_auto" class="lcontrol">Tự động</label>
+                     <input id="avim_telex" type="radio" name="AVIMMethod" onclick="AVIMObj.setMethod(1);" />&nbsp;
+                     <label for="avim_telex" class="lcontrol">TELEX</label>
+                     <input id="avim_vni" type="radio" name="AVIMMethod" onclick="AVIMObj.setMethod(2);" />&nbsp;
+                     <label for="avim_vni" class="lcontrol">VNI</label>
+                     <input id="avim_viqr" type="radio" name="AVIMMethod" onclick="AVIMObj.setMethod(3);" />&nbsp;
+                     <label for="avim_viqr" class="lcontrol">VIQR</label>
+                     <span>&nbsp;~~~~~&nbsp;</span>
+                     <input id="avim_ckspell" type="checkbox" onclick="AVIMObj.setSpell(this);" />&nbsp;
+                     <label for="avim_ckspell" class="lcontrol">Chính tả</label>
+                     <input id="avim_daucu" type="checkbox" onclick="AVIMObj.setDauCu(this);" />&nbsp;
+                     <label for="avim_daucu" class="lcontrol">Bỏ dấu sớm</label>
+                  </fieldset>
+               </div>
+            </div>
+            <script async type="text/javascript" src="media/js/avim.js"></script>
+            <p>Kiểu gõ Telex được ưa thích sử dụng ở miền Bắc vì thuận tiện, gõ nhanh, dễ nhớ và dễ dùng. Trong khi đó kiểu gõ VNI (kết hợp với các phím số 0-9) lại được sử dụng phổ biên ở miền Nam.</p>
+            <p>Nếu bạn chọn 
+               <strong>bỏ dấu sớm</strong> (hay bỏ dấu kiểu cũ) bộ gõ sẽ bỏ dấu (sắc, huyền, hỏi, ngã, nặng) ngay trên nguyên âm đầu tiên (
+               <em>ví dụ: hòa, tỏa, thúy, thủy...</em>). Về mặt mỹ thuật, kiểu bỏ dấu sớm sẽ tạo sự cân đối, đẹp mắt cho các từ tiếng Việt. Ngược lại khi chọn bỏ dấu muộn, bộ gõ sẽ bỏ dấu tiếng Việt trên nguyên âm cuối cùng của từ (
+               <em>ví dụ: hoà, toả, thuý, thuỷ...</em>). Bạn nên thống nhất một kiểu bỏ dấu khi soạn thảo văn bản trên Windows vì nó sẽ liên quan tới thứ tự sắp xếp (chẳng hạn như khi sắp xếp danh sách theo họ tên).
+            </p>
+         </div>
+      </div>
+      <div class="wrapper nav">
+         <div class="custom">
+            <a id="gioi-thieu"></a>
+            <ul>
+               <li>
+                  <a href="#go-online">Gõ Online</a>
+               </li>
+               <li class="active">
+                  <a href="#gioi-thieu">Giới thiệu</a>
+               </li>
+               <li>
+                  <a href="#hinh-anh">Hình ảnh</a>
+               </li>
+               <li>
+                  <a href="#tinh-nang">Tính năng</a>
+               </li>
+               <li>
+                  <a href="#download">Download EVKey</a>
+               </li>
+               <li>
+                  <a href="#huong-dan">Hướng dẫn</a>
+               </li>
+               <li>
+                  <a href="#tac-gia">Tác giả</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="wrapper box2">
+         <div class="inner">
+            <div class="sectiontitlegoc"></div>
+            <div class="sectiontitle">
+               <h2>Phần mềm gõ tiếng Việt EVKey mới nhất</h2>
+            </div>
+            <div class="custom">
+               <div class="block2">
+                  <p>
+                     <strong>Phần mềm EVKey</strong> là một trong những
+                     <strong>phần mềm tự do mã nguồn mở</strong> dùng để 
+                     <strong>gõ tiếng Việt</strong> (go tieng Viet - Vietnamese) được phát hành và sử dụng hoàn toàn miễn phí
+                  </p>
+                  <p>
+                     <strong>Bộ gõ tiếng Việt EVKey mới nhất</strong> có thể cài đặt trên 
+                     <strong>hệ điều hành Windows</strong> (Win 10, Window 8, Win 7, Win XP...) và được cập nhật liên tục khi có phản hồi của người dùng
 					</p>
-					<p>Khuyến cáo: Bạn nên chọn download bản cài đặt (Setup) để việc chạy EVKey được ổn định. Chỉ dùng bản chạy trực tiếp (Portable) nếu không có tài khoản Admin / Administrator để cài đặt. Ngoài ra bạn cần chú ý tới phiên bản Windows đang sử dụng là 
-						<strong>64bit</strong> hay 
-						<strong>32bit</strong> để chọn bản cài đặt tương ứng. Việc lựa chọn đúng phiên bản sẽ giúp cho chương trình luôn chạy ổn định, không xảy ra lỗi, xung đột với các chương trình khác. Để xác định nhanh hệ điều hành bạn đang sử dụng là 64bit hay 32bit, hãy xem hướng dẫn ở phía dưới.
-					</p>
-					<p>Cảnh báo: Trên mạng hiện có nhiều trang cung cấp phần mềm EVKey. Tuy nhiên vì lý do 
-						<strong>an toàn cho máy tính của chính bạn</strong> và tất cả mọi người, chúng tôi khuyến cáo 
-						<strong>
-							<a href="/" title="Tải EVKey mới nhất">chỉ tải EVKey từ website evkey.org</a>
-						</strong> hoặc từ 
-						<strong>
-							<a href="https://www.facebook.com/bogotiengvietevkey/" target="_blank" rel="nofollow" title="Website dự án EVKey">website dự án EVKey</a>
-						</strong> (tại faebook.com). Nếu bạn tải EVKey từ những nguồn không rõ ràng khác, bạn sẽ có nguy cơ bị lây nhiễm các phần mềm độc hại.
-					</p>
-					<hr />
-					<p>
-						<strong>CHECKSUM để đảm bảo tính toàn vẹn của file (đảm bảo file không bị thay đổi, chỉnh sửa so với file gốc)</strong>
-					</p>
-					
-					<p>Link download từ Google drive: 
-						<a href="https://drive.google.com/drive/folders/12DbnnsOs89D79loTZ_rTuU696qZZPB1_" target="_blank" rel="nofollow">https://drive.google.com/drive/folders/12DbnnsOs89D79loTZ_rTuU696qZZPB1_</a>
-					</p>
-					<p>Ngoài ra các bạn có thể kiểm tra lại file với dịch vụ quét virus online tại site 
-						<strong>virustotal.com</strong>. Tuy nhiên bạn cũng cần lưu ý: Thỉnh thoảng một số bản cập nhật của các phần mềm diệt virus vẫn nhận nhầm những ứng dụng có liên quan tới xử lý bàn phím (hook keyboard) trong đó có EVKey, hay thậm chí là phần mềm diệt virus khác là độc hại. Bạn không nên quá hoảng hốt, bạn chỉ cần thấy hầu hết các phần mềm Top đầu như: Kaspersky, AVG, Avira, Avast, Norton, Bitdefender, Symantec... hay BKAV thông báo CLEAN là OK.
-
-					</p>
-					<hr />
-					<p>
-						<strong>Tại sao tải EVKey tại website này lại an toàn?</strong>
-					</p>
-					<p>Với những nỗ lực không biết mệt mỏi trong suốt nhiều năm qua, chúng tôi luôn cập nhật các bản cài đặt mới nhất, an toàn, tương thích tốt và chạy ổn định trên mọi máy tính. Máy chủ của EVKey chỉ cho phép chạy giới hạn các tệp tin tĩnh (HTML, CSS, JS, PNG/JPG) và chứa một số file cài đặt (.exe, .zip) để download mà không chạy bất cứ CMS hay script nào khác. Website evkey.org cũng luôn phối hợp và nhận được sự tư vấn, hỗ trợ nhiệt tình của các chuyên gia bảo mật để kiểm tra thường xuyên, nhằm ngăn chặn, phát hiện và loại trừ mọi sự xâm nhập, can thiệp đảm bảo sự an toàn của hàng triệu máy tính đang sử dụng bộ gõ tiếng Việt EVKey trên lãnh thổ Việt Nam cũng như ở nhiều quốc gia trên thế giới như: Mỹ, Úc, Canada, Đức, Pháp, Nga, Nhật Bản, Hàn Quốc...</p>
-				</div>
-			</div>
-			<div class="wrapper nav">
-				<div class="custom">
-					<a id="huong-dan"></a>
-					<ul>
-						<li>
-							<a href="#go-online">Gõ Online</a>
-						</li>
-						<li>
-							<a href="#gioi-thieu">Giới thiệu</a>
-						</li>
-						<li>
-							<a href="#hinh-anh">Hình ảnh</a>
-						</li>
-						<li>
-							<a href="#tinh-nang">Tính năng</a>
-						</li>
-						<li>
-							<a href="#download">Download EVKey</a>
-						</li>
-						<li class="active">
-							<a href="#huong-dan">Hướng dẫn</a>
-						</li>
-						<li>
-							<a href="#tac-gia">Tác giả</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="wrapper box2">
-				<div class="inner">
-					<div class="sectiontitlegoc"></div>
-					<div class="sectiontitle">
-						<h2>Hướng dẫn cài đặt & sử dụng phần mềm EVKey - EVKey 2019 mới nhất</h2>
-					</div>
-					<div class="custom">
-						<h3>Hướng dẫn cài đặt EVKey</h3>
-						<p>Đầu tiên bạn hãy truy cập vào website 
-							<strong>evkey.org</strong>, tìm mục Download và tải về bản cài đặt tương ứng với máy tính của mình. 
-						</p>
-						<ul>
-							<li>Nếu bạn sử dụng Windows 64 bit (những máy tính mới có RAM từ 4GB trở lên): Chọn bản 64 bit</li>
-							<li>Nếu bạn sử dụng Windows 32 bit (những máy tính cũ chỉ có 4GB RAM trở xuống): Chọn bản 32 bit</li>
-						</ul>
-						<p>Lưu ý: Để việc chạy EVKey được ổn định bạn nên chọn cài đặt EVKey nếu có thể. Chỉ khi không có quyền cài đặt bạn mới chọn bản chạy trực tiếp (Portable)</p>
-						<p>
-							<strong>Cách xác định máy tính chạy Windows 64bit hay 32bit</strong>: Nhấn chuột phải lên biểu tượng 
-							<strong>[My Computer]</strong> và chọn 
-							<strong>[Properties]</strong>
-						</p>
-						<img src="media/images/screenshots/windows-10-64bit.png" alt="Windows 10 Pro 64bit" title="Cách xác định Windows 64bit hay 32bit" width="879" height="555" style="border:2px solid #bbb;" />
-						<h3>Hướng dẫn sử dụng EVKey</h3>
-						<p>Để đánh tiếng Việt có dấu bạn phải gõ chữ cái chính trước, sau đó gõ các dấu thanh, dấu mũ, dấu móc. Các kiểu 
-							<strong>gõ tiếng Việt có dấu</strong> khác nhau sẽ quy định các phím bấm khác nhau cho các dấu thanh, dấu mũ và dấu móc. Tuy bạn có thể gõ phím dấu ngay sau các chữ cái gốc, nhưng điều này dễ dẫn đến việc bỏ dấu không nhất quán. Ví dụ: chữ toán có thể được viết thành tóan. Với phần mềm EVKey, bạn nên gõ dấu ở cuối từ và EVKey sẽ luôn tự động đặt dấu đúng vào chữ cái cần thiết.
-						</p>
-						<p>Khi gõ tiếng Việt, trạng thái chữ hoa, chữ thường phụ thuộc vào trạng thái của các phím SHIFT và CAPS LOCK. Với các bảng mã 1 byte (TCVN 3, BK HCM1, VISCII, VPS), bạn phải dùng font chữ hoa mới có được chữ hoa có dấu. Với font chữ thường, bạn chỉ có thể gõ được các chữ hoa không đấu: Â, Ă, Ê, Ô, Ơ, Ư, Đ.</p>
-						<p>Khi đánh tiếng Việt hay gõ tiếng Việt, bạn có thể dùng bảng điều khiển của chương trình EVKey để tắt chức năng bỏ dấu ở cuối từ.</p>
-					</div>
-					<div class="clear"></div>
-				</div>
-			</div>
-			<div class="wrapper nav">
-				<div class="custom">
-					<a id="tac-gia"></a>
-					<ul>
-						<li>
-							<a href="#go-online">Gõ Online</a>
-						</li>
-						<li>
-							<a href="#gioi-thieu">Giới thiệu</a>
-						</li>
-						<li>
-							<a href="#hinh-anh">Hình ảnh</a>
-						</li>
-						<li>
-							<a href="#tinh-nang">Tính năng</a>
-						</li>
-						<li>
-							<a href="#download">Download EVKey</a>
-						</li>
-						<li>
-							<a href="#huong-dan">Hướng dẫn</a>
-						</li>
-						<li class="active">
-							<a href="#tac-gia">Tác giả</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="wrapper box2">
-				<div class="inner">
-					<div class="sectiontitlegoc"></div>
-					<div class="sectiontitle">
-						<h2>Vài nét về tác giả</h2>
-					</div>					
-					<div class="custom">				
-						
-						<p>
-							<strong>Mục đích của evkey.org</strong>: Website nhằm cung cấp một nơi lưu trữ và tải về an toàn các bản cài đặt EVKey x64/x86, các bản chạy trực tiếp phần mềm EVKey 32/64 bit trên Windows bên cạnh website của dự án phân phối phần mềm nguồn mở, miễn phí tại evkey.org / facebook.com. Tất cả đều được cung cấp miễn phí từ nhiều năm qua và sẽ luôn như vậy.
-						</p>
-						<p>
-							<strong>Chính sách bảo mật:</strong> Chúng tôi không lưu trữ bất cứ thông tin gì của người dùng và không can thiệp vào dữ liệu, kết nối mạng máy tính của người dùng ngoài chức năng chính của phần mềm (VD: đối với EVKey là gõ tiếng Việt có dấu trên Win 10, Win7...). Website này cũng liên tục được giám sát và bảo vệ nhiều lớp để đảm bảo mọi thông tin và file cài đặt, các gói download trên máy chủ không bị tấn công, chỉnh sửa, gắn thêm mã độc cho những mục đích xấu.
-						</p>
-						<p>
-							<strong>Vậy thì chúng tôi là ai?</strong> Chúng tôi là những người yêu tự do, yêu phầm mềm nguồn mở và thích sự miễn phí. Chúng tôi mong muốn mọi người đều có thể tiếp cận những ứng dụng hữu ích, không thương mại hóa trong đó có EVKey và nhiều phần mềm miễn phí khác của người Việt. Bên cạnh đó chúng tôi cũng luôn muốn đảm bảo bất kỳ ai khi sử dụng đều được an toàn. Vì vậy chúng tôi đã, đang và sẽ nỗ lực hết mình để duy trì website này.
-						</p>						
-						<p>Mong sẽ có nhiều sự hỗ trợ đóng góp ý kiến từ người dùng để EVKey ngày càng hoàn thiện hơn <strong>EVKey</strong> xin cảm ơn tất cả.</p>
-				
-						<p>
-							<strong>Chỉ cần bạn được sử dụng phần mềm MIỄN PHÍ, TIỆN LỢI và AN TOÀN, chúng tôi đã cảm thấy hạnh phúc.</strong>
-							
-						</p>
-					</div>
-					<div class="clear"></div>
-				</div>
-			</div>
-			<div class="wrapper footer">EVKey is the most popular Vietnamese keyboard for Windows / Win. This software is distributed under the GNU GPL from the EVKey project</div>
-			<div id="glesticky"></div>
-		</body>
-		
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138580242-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-138580242-1');
-</script>
-
-	</html>
+               </div>
+               <div class="block2">
+                  <img src="media/images/screenshots/evkey.png" width="100%" height="" alt="Giao diện bộ gõ tiếng Việt EVKey trên Windows" style="max-width:570px;" />
+                  <p>Ứng dụng EVKey được phát hành theo giấy phép GNU General Public License version 2.0 (GPLv2). Điều đó có nghĩa là phần mềm EVKey được phân phối miễn phí, tự do. Có thể 
+                     <strong>
+                     <a href="#download" title="Tải phần mềm gõ tiếng Việt EVKey mới nhất">tải EVKey</a> 
+                     </strong> và cài đặt để đánh tiếng Việt dễ dàng
+                  </p>
+               </div>
+            </div>
+            <hr/>
+            <p>
+               <strong>Các tính năng vượt trội của EVKey so với các phần mềm khác</strong>
+            </p>
+            <p>Ngoài những chức năng cơ bản và thêm một số chức năng đặc biệt, thì EVKey là một bộ gõ tiếng Việt hoàn toàn đầy đủ những chức năng cần thiết như những phần mềm gõ Tiếng Việt khác trên thị trường.</p>
+            <ol>
+               Một số chức năng vượt trội của EVKey:
+               <li>1. Tối ưu nhanh nhẹ, ít tốn tài nguyên</li>
+               <li>2. Không bị lỗi tiếng Việt khi gõ trên thanh địa chỉ trình duyệt Web hoặc trong Excel</li>
+               <li>3. Tắt chức năng nhập tiếng Việt cho ứng dụng mà người dùng không muốn</li>
+               <li>4. Hỗ trợ gõ tiếng Việt những ứng dụng Metro</li>
+               <li>5. Hỗ trợ game LOL, DOTA 2</li>
+               <li>6. Hỗ trợ game Audition và Đột kích</li>
+               <li>7. Giảm hiện tượng treo bộ gõ</li>
+            </ol>
+            <div class="clear"></div>
+         </div>
+      </div>
+      <div class="wrapper nav">
+         <div class="custom">
+            <a id="hinh-anh"></a>
+            <ul>
+               <li>
+                  <a href="#go-online">Gõ Online</a>
+               </li>
+               <li>
+                  <a href="#gioi-thieu">Giới thiệu</a>
+               </li>
+               <li class="active">
+                  <a href="#hinh-anh">Hình ảnh</a>
+               </li>
+               <li>
+                  <a href="#tinh-nang">Tính năng</a>
+               </li>
+               <li>
+                  <a href="#download">Download EVKey</a>
+               </li>
+               <li>
+                  <a href="#huong-dan">Hướng dẫn</a>
+               </li>
+               <li>
+                  <a href="#tac-gia">Tác giả</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="wrapper box2">
+         <div class="inner">
+            <div class="sectiontitlegoc"></div>
+            <div class="sectiontitle">
+               <h2>Giao diện bộ gõ tiếng Việt EVKey</h2>
+            </div>
+            <div class="custom">
+               <div class="block3">
+                  <img src="media/images/screenshots/evkey-gui.png" />
+               </div>
+               <div class="block3">
+                  <img src="media/images/screenshots/evkey-macro.png" />
+               </div>
+               <div class="block3">
+                  <img src="media/images/screenshots/evkey-toolkit.png" />
+               </div>
+            </div>
+            <div class="clear"></div>
+            <div class="custom">
+               <p>Bộ gõ tiếng Việt EVKey các phiên bản từ EVKey có giao diện khá đơn giản, đồng nhất trên các hệ điều hành Windows (Win 10, Win 7..), dễ quản lý và dễ sử dụng. Mọi chức năng và thiết lập của phần mềm đều được tập trung duy nhất trên một bảng điều khiển. Ở chế độ thu nhỏ (Compact) EVKey chỉ hiện thị 3 thiết lập chính: Lựa chọn bảng mã, kiểu gõ và tổ hợp phím chuyển đổi. Điều này cho phép người sử dụng mới dễ dàng tiếp cận, không bị rối so với nhiều phần mềm gõ tiếng Việt khác như VietKey, GoTiengViet... Với những người dùng cao cấp hơn, EVKey cũng cung cấp thêm nhiều tùy chọn ở chế độ mở rộng (Advanced).</p>
+            </div>
+         </div>
+      </div>
+      <div class="wrapper nav">
+         <div class="custom">
+            <a id="tinh-nang"></a>
+            <ul>
+               <li>
+                  <a href="#go-online">Gõ Online</a>
+               </li>
+               <li>
+                  <a href="#gioi-thieu">Giới thiệu</a>
+               </li>
+               <li>
+                  <a href="#hinh-anh">Hình ảnh</a>
+               </li>
+               <li class="active">
+                  <a href="#tinh-nang">Tính năng</a>
+               </li>
+               <li>
+                  <a href="#download">Download EVKey</a>
+               </li>
+               <li>
+                  <a href="#huong-dan">Hướng dẫn</a>
+               </li>
+               <li>
+                  <a href="#tac-gia">Tác giả</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="wrapper box2">
+         <div class="inner">
+            <div class="sectiontitlegoc"></div>
+            <div class="sectiontitle">
+               <h2>Tính năng của bộ gõ tiếng Việt EVKey - EVKey 2019</h2>
+            </div>
+            <div class="custom">
+               <div class="block2">
+                  <p>Ngay từ những phiên bản đầu tiên EVKey đã hỗ trợ rất nhiều bảng mã tiếng Việt (Vietnamese) bao gồm: Unicode dựng sẵn, Unicode tổ hợp, TCVN3 (ABC), VNI Windows, BK HCM1, BK HCM2, Vietware-X, Vietware-F, VPS, VISCII... Tuy nhiên dần dần theo thời gian, một số bảng mã đã không còn phổ biến, thậm chí rất hiếm khi được nhắc đến. Vì vậy nếu bạn là người dùng mới hay dân văn phòng bạn chỉ cần quan tâm tới 2 bảng mã duy nhất: Unicode dựng sẵn và TCVN3 (ABC).</p>
+                  <p>Ngoài hỗ trợ những bảng mã tiếng Việt ở trên, EVKey còn là một công cụ đắc lực cho dân lập trình vì nó cho phép bạn gõ những chuỗi ký tự dựa trên một số phương pháp mã hóa Unicode khá đặc biệt như: X UTF-8, UTF-8 Literal, NCR Decimal, NCR Hexadecimal, NCR Hex, Unicode C String.</p>
+                  <p>EVKey cũng hỗ trợ chuẩn tiếng Việt của hãng Microsoft (Vietnamese locale CP 1258) - một bảng mã ít thông dụng nhưng hỗ trợ khá tốt cho các ký tự tiếng Việt xuất hiện trong các form nhập liệu, viết macro, lập trình Visual Basic trên bộ Microsoft Office như Word, Excel, Access...</p>
+                  <p>EVKey Hỗ trợ 5 kiểu gõ tiếng Việt, 
+                     <strong>đánh tiếng Việt</strong> - Vietnamese thông dụng nhất: TELEX, VNI, VIQR, kiểu Microsoft và kiểu tự định nghĩa. Hầu hết người miền Bắc ưa thích kiểu gõ Telex, người miền Nam thì ưa thích kiểu gõ VNI, các kiểu còn lại thì ít phổ biến.
+                  </p>
+               </div>
+               <div class="block2">
+                  <img src="media/images/screenshots/evkey-taskbar.png" alt="Gõ tiếng Việt EVKey trên taskbar"/>
+                  <p>
+                     <strong>Phần mềm EVKey</strong> có nhiều phiên bản khác nhau, tất cả đều ổn định và chỉ có kích thước nhỏ (chỉ vài trăm KB), và không yêu cầu thêm bất cứ thư viện nào khác nên bạn có thể 
+                     <a href="#download" title="Tải phần mềm gõ tiếng Việt EVKey mới nhất">tải EVKey</a> hoặc 
+                     <strong>
+                     <a href="#download" title="Download phần mềm gõ tiếng Việt EVKey mới nhất">download EVKey</a>
+                     </strong> và cài đặt EVKey một cách dễ dàng.
+                  </p>
+                  <p>EVKey cho phép chuyển đổi (convert) qua lại giữa 15 bảng mã tiếng Việt từ clip-board (bộ nhớ máy tính) hoặc từ file văn bản .TXT hoặc .RTF</p>
+                  <p>EVKey chạy rất ổn định trên tất cả các phiên bản Windows: Từ phiên bản Windows 10 - Win 10 mới nhất hiện nay, cho tới các phiên bản cũ hơn nhưng cũng khá phổ biến như Windows 8, Windows 8.1, Windows 7</p>
+               </div>
+               <div>
+               </div>
+            </div>
+            <div class="clear"></div>
+         </div>
+      </div>
+      <div class="wrapper nav">
+         <div class="custom">
+            <a id="download"></a>
+            <ul>
+               <li>
+                  <a href="#go-online">Gõ Online</a>
+               </li>
+               <li>
+                  <a href="#gioi-thieu">Giới thiệu</a>
+               </li>
+               <li>
+                  <a href="#hinh-anh">Hình ảnh</a>
+               </li>
+               <li>
+                  <a href="#tinh-nang">Tính năng</a>
+               </li>
+               <li class="active">
+                  <a href="#download">Download EVKey</a>
+               </li>
+               <li>
+                  <a href="#huong-dan">Hướng dẫn</a>
+               </li>
+               <li>
+                  <a href="#tac-gia">Tác giả</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="wrapper box2">
+         <div class="inner">
+            <div class="sectiontitlegoc"></div>
+            <div class="sectiontitle">
+               <h2>Tải EVKey miễn phí - Download EVKey mới nhất cho Win 10, Win 8, Win 7</h2>
+            </div>
+            <div class="custom">
+               <div class="block4">&nbsp;</div>
+               <div class="block4">
+                  <h3>
+                     <a href="https://drive.google.com/drive/folders/12DbnnsOs89D79loTZ_rTuU696qZZPB1_" title="EVKey bản chạy trực tiếp 32bit không cần cài đặt" rel="nofollow">Bản chạy trực tiếp 32bit</a>
+                  </h3>
+                  <img src="media/images/download/evkey-portable.png" alt="EVKey Portable" width="155" height="144" />
+                  <a class="downloadbutton" href="https://drive.google.com/drive/folders/12DbnnsOs89D79loTZ_rTuU696qZZPB1_" >Download</a>
+                  <div class="downloadnote">
+                     <strong>EVKey 32bit Portable</strong>
+                  </div>
+               </div>
+               <div class="block4">
+                  <h3>
+                     <a href="https://drive.google.com/drive/folders/12DbnnsOs89D79loTZ_rTuU696qZZPB1_" title="EVKey bản chạy trực tiếp 64bit không cần cài đặt" rel="nofollow">Bản chạy trực tiếp 64bit</a>
+                  </h3>
+                  <img src="media/images/download/evkey-portable.png" alt="EVKey Portable" width="155" height="144" />
+                  <a class="downloadbutton" href="https://drive.google.com/drive/folders/12DbnnsOs89D79loTZ_rTuU696qZZPB1_">Download</a>
+                  <div class="downloadnote">
+                     <strong>EVKey 64bit Portable</strong>
+                  </div>
+               </div>
+            </div>
+            <div class="clear"></div>
+            <p style="text-align:center;">Website có hỗ trợ 
+               <strong>HTTPS</strong> (giao thức bảo mật với SSL), nếu muốn bạn có thể truy cập 
+               <strong>
+               <a href="/" title="Bộ gõ tiếng Việt EVKey">https://evkey.org</a>
+               </strong>
+               <br>HTTPS nhằm đảm bảo file không bị chuyển hướng, thay đổi hoặc chỉnh sửa ngay cả đối với nhà cung cấp dịch vụ Internet của bạn.
+            </p>
+            <p>Khuyến cáo: Bạn nên chọn download bản cài đặt (Setup) để việc chạy EVKey được ổn định. Chỉ dùng bản chạy trực tiếp (Portable) nếu không có tài khoản Admin / Administrator để cài đặt. Ngoài ra bạn cần chú ý tới phiên bản Windows đang sử dụng là 
+               <strong>64bit</strong> hay 
+               <strong>32bit</strong> để chọn bản cài đặt tương ứng. Việc lựa chọn đúng phiên bản sẽ giúp cho chương trình luôn chạy ổn định, không xảy ra lỗi, xung đột với các chương trình khác. Để xác định nhanh hệ điều hành bạn đang sử dụng là 64bit hay 32bit, hãy xem hướng dẫn ở phía dưới.
+            </p>
+            <p>Cảnh báo: Trên mạng hiện có nhiều trang cung cấp phần mềm EVKey. Tuy nhiên vì lý do 
+               <strong>an toàn cho máy tính của chính bạn</strong> và tất cả mọi người, chúng tôi khuyến cáo 
+               <strong>
+               <a href="/" title="Tải EVKey mới nhất">chỉ tải EVKey từ website evkey.org</a>
+               </strong> hoặc từ 
+               <strong>
+               <a href="https://www.facebook.com/bogotiengvietevkey/" target="_blank" rel="nofollow" title="Website dự án EVKey">website dự án EVKey</a>
+               </strong> (tại faebook.com). Nếu bạn tải EVKey từ những nguồn không rõ ràng khác, bạn sẽ có nguy cơ bị lây nhiễm các phần mềm độc hại.
+            </p>
+            <hr />
+            <p>
+               <strong>CHECKSUM để đảm bảo tính toàn vẹn của file (đảm bảo file không bị thay đổi, chỉnh sửa so với file gốc)</strong>
+            </p>
+            <p>Link download từ Google drive: 
+               <a href="https://drive.google.com/drive/folders/12DbnnsOs89D79loTZ_rTuU696qZZPB1_" target="_blank" rel="nofollow">https://drive.google.com/drive/folders/12DbnnsOs89D79loTZ_rTuU696qZZPB1_</a>
+            </p>
+            <p>Ngoài ra các bạn có thể kiểm tra lại file với dịch vụ quét virus online tại site 
+               <strong>virustotal.com</strong>. Tuy nhiên bạn cũng cần lưu ý: Thỉnh thoảng một số bản cập nhật của các phần mềm diệt virus vẫn nhận nhầm những ứng dụng có liên quan tới xử lý bàn phím (hook keyboard) trong đó có EVKey, hay thậm chí là phần mềm diệt virus khác là độc hại. Bạn không nên quá hoảng hốt, bạn chỉ cần thấy hầu hết các phần mềm Top đầu như: Kaspersky, AVG, Avira, Avast, Norton, Bitdefender, Symantec... hay BKAV thông báo CLEAN là OK.
+            </p>
+            <hr />
+            <p>
+               <strong>Tại sao tải EVKey tại website này lại an toàn?</strong>
+            </p>
+            <p>Với những nỗ lực không biết mệt mỏi trong suốt nhiều năm qua, chúng tôi luôn cập nhật các bản cài đặt mới nhất, an toàn, tương thích tốt và chạy ổn định trên mọi máy tính. Máy chủ của EVKey chỉ cho phép chạy giới hạn các tệp tin tĩnh (HTML, CSS, JS, PNG/JPG) và chứa một số file cài đặt (.exe, .zip) để download mà không chạy bất cứ CMS hay script nào khác. Website evkey.org cũng luôn phối hợp và nhận được sự tư vấn, hỗ trợ nhiệt tình của các chuyên gia bảo mật để kiểm tra thường xuyên, nhằm ngăn chặn, phát hiện và loại trừ mọi sự xâm nhập, can thiệp đảm bảo sự an toàn của hàng triệu máy tính đang sử dụng bộ gõ tiếng Việt EVKey trên lãnh thổ Việt Nam cũng như ở nhiều quốc gia trên thế giới như: Mỹ, Úc, Canada, Đức, Pháp, Nga, Nhật Bản, Hàn Quốc...</p>
+         </div>
+      </div>
+      <div class="wrapper nav">
+         <div class="custom">
+            <a id="huong-dan"></a>
+            <ul>
+               <li>
+                  <a href="#go-online">Gõ Online</a>
+               </li>
+               <li>
+                  <a href="#gioi-thieu">Giới thiệu</a>
+               </li>
+               <li>
+                  <a href="#hinh-anh">Hình ảnh</a>
+               </li>
+               <li>
+                  <a href="#tinh-nang">Tính năng</a>
+               </li>
+               <li>
+                  <a href="#download">Download EVKey</a>
+               </li>
+               <li class="active">
+                  <a href="#huong-dan">Hướng dẫn</a>
+               </li>
+               <li>
+                  <a href="#tac-gia">Tác giả</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="wrapper box2">
+         <div class="inner">
+            <div class="sectiontitlegoc"></div>
+            <div class="sectiontitle">
+               <h2>Hướng dẫn cài đặt & sử dụng phần mềm EVKey - EVKey 2019 mới nhất</h2>
+            </div>
+            <div class="custom">
+               <h3>Hướng dẫn cài đặt EVKey</h3>
+               <p>Đầu tiên bạn hãy truy cập vào website 
+                  <strong>evkey.org</strong>, tìm mục Download và tải về bản cài đặt tương ứng với máy tính của mình. 
+               </p>
+               <ul>
+                  <li>Nếu bạn sử dụng Windows 64 bit (những máy tính mới có RAM từ 4GB trở lên): Chọn bản 64 bit</li>
+                  <li>Nếu bạn sử dụng Windows 32 bit (những máy tính cũ chỉ có 4GB RAM trở xuống): Chọn bản 32 bit</li>
+               </ul>
+               <p>Lưu ý: Để việc chạy EVKey được ổn định bạn nên chọn cài đặt EVKey nếu có thể. Chỉ khi không có quyền cài đặt bạn mới chọn bản chạy trực tiếp (Portable)</p>
+               <p>
+                  <strong>Cách xác định máy tính chạy Windows 64bit hay 32bit</strong>: Nhấn chuột phải lên biểu tượng 
+                  <strong>[My Computer]</strong> và chọn 
+                  <strong>[Properties]</strong>
+               </p>
+               <img src="media/images/screenshots/windows-10-64bit.png" alt="Windows 10 Pro 64bit" title="Cách xác định Windows 64bit hay 32bit" width="879" height="555" style="border:2px solid #bbb;" />
+               <h3>Hướng dẫn sử dụng EVKey</h3>
+               <p>Để đánh tiếng Việt có dấu bạn phải gõ chữ cái chính trước, sau đó gõ các dấu thanh, dấu mũ, dấu móc. Các kiểu 
+                  <strong>gõ tiếng Việt có dấu</strong> khác nhau sẽ quy định các phím bấm khác nhau cho các dấu thanh, dấu mũ và dấu móc. Tuy bạn có thể gõ phím dấu ngay sau các chữ cái gốc, nhưng điều này dễ dẫn đến việc bỏ dấu không nhất quán. Ví dụ: chữ toán có thể được viết thành tóan. Với phần mềm EVKey, bạn nên gõ dấu ở cuối từ và EVKey sẽ luôn tự động đặt dấu đúng vào chữ cái cần thiết.
+               </p>
+               <p>Khi gõ tiếng Việt, trạng thái chữ hoa, chữ thường phụ thuộc vào trạng thái của các phím SHIFT và CAPS LOCK. Với các bảng mã 1 byte (TCVN 3, BK HCM1, VISCII, VPS), bạn phải dùng font chữ hoa mới có được chữ hoa có dấu. Với font chữ thường, bạn chỉ có thể gõ được các chữ hoa không đấu: Â, Ă, Ê, Ô, Ơ, Ư, Đ.</p>
+               <p>Khi đánh tiếng Việt hay gõ tiếng Việt, bạn có thể dùng bảng điều khiển của chương trình EVKey để tắt chức năng bỏ dấu ở cuối từ.</p>
+            </div>
+            <div class="clear"></div>
+         </div>
+      </div>
+      <div class="wrapper nav">
+         <div class="custom">
+            <a id="tac-gia"></a>
+            <ul>
+               <li>
+                  <a href="#go-online">Gõ Online</a>
+               </li>
+               <li>
+                  <a href="#gioi-thieu">Giới thiệu</a>
+               </li>
+               <li>
+                  <a href="#hinh-anh">Hình ảnh</a>
+               </li>
+               <li>
+                  <a href="#tinh-nang">Tính năng</a>
+               </li>
+               <li>
+                  <a href="#download">Download EVKey</a>
+               </li>
+               <li>
+                  <a href="#huong-dan">Hướng dẫn</a>
+               </li>
+               <li class="active">
+                  <a href="#tac-gia">Tác giả</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="wrapper box2">
+         <div class="inner">
+            <div class="sectiontitlegoc"></div>
+            <div class="sectiontitle">
+               <h2>Vài nét về tác giả</h2>
+            </div>
+            <div class="custom">
+               <p>
+                  <strong>Mục đích của evkey.org</strong>: Website nhằm cung cấp một nơi lưu trữ và tải về an toàn các bản cài đặt EVKey x64/x86, các bản chạy trực tiếp phần mềm EVKey 32/64 bit trên Windows bên cạnh website của dự án phân phối phần mềm nguồn mở, miễn phí tại evkey.org / facebook.com. Tất cả đều được cung cấp miễn phí từ nhiều năm qua và sẽ luôn như vậy.
+               </p>
+               <p>
+                  <strong>Chính sách bảo mật:</strong> Chúng tôi không lưu trữ bất cứ thông tin gì của người dùng và không can thiệp vào dữ liệu, kết nối mạng máy tính của người dùng ngoài chức năng chính của phần mềm (VD: đối với EVKey là gõ tiếng Việt có dấu trên Win 10, Win7...). Website này cũng liên tục được giám sát và bảo vệ nhiều lớp để đảm bảo mọi thông tin và file cài đặt, các gói download trên máy chủ không bị tấn công, chỉnh sửa, gắn thêm mã độc cho những mục đích xấu.
+               </p>
+               <p>
+                  <strong>Vậy thì chúng tôi là ai?</strong> Chúng tôi là những người yêu tự do, yêu phầm mềm nguồn mở và thích sự miễn phí. Chúng tôi mong muốn mọi người đều có thể tiếp cận những ứng dụng hữu ích, không thương mại hóa trong đó có EVKey và nhiều phần mềm miễn phí khác của người Việt. Bên cạnh đó chúng tôi cũng luôn muốn đảm bảo bất kỳ ai khi sử dụng đều được an toàn. Vì vậy chúng tôi đã, đang và sẽ nỗ lực hết mình để duy trì website này.
+               </p>
+               <p>Mong sẽ có nhiều sự hỗ trợ đóng góp ý kiến từ người dùng để EVKey ngày càng hoàn thiện hơn <strong>EVKey</strong> xin cảm ơn tất cả.</p>
+               <p>
+                  <strong>Chỉ cần bạn được sử dụng phần mềm MIỄN PHÍ, TIỆN LỢI và AN TOÀN, chúng tôi đã cảm thấy hạnh phúc.</strong>
+               </p>
+            </div>
+            <div class="clear"></div>
+         </div>
+      </div>
+      <div class="wrapper footer">EVKey is the most popular Vietnamese keyboard for Windows / Win. This software is distributed under the GNU GPL from the EVKey project</div>
+      <div id="glesticky"></div>
+   </body>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138580242-1"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-138580242-1');
+   </script>
+</html>
